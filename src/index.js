@@ -4,6 +4,7 @@ import { createGoogleGenerativeAI } from "@ai-sdk/google";
 import { generateObject, generateText } from 'ai';
 import { authMiddleware } from './middleware';
 import { z } from "zod";
+import databaseAPI from './db/data';
 
 const app = new Hono();
 
@@ -51,5 +52,7 @@ app.post('/search', async (c) => {
   
   return c.json({result: result.object, status_code: 200});
 })
+
+app.route("/WBkI9gfCUk", databaseAPI);
 
 export default app;

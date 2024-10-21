@@ -2,17 +2,24 @@
   "name": "backend-ai",
   "scripts": {
     "dev": "wrangler dev",
-    "deploy": "wrangler deploy --minify"
+    "deploy": "wrangler deploy --minify",
+    "schema-update": "drizzle-kit generate --config=drizzle.config.js",
+    "migrate:neon": "node --env-file=.dev.vars src/migrate.js"
   },
   "dependencies": {
     "@ai-sdk/google": "^0.0.51",
     "@ai-sdk/openai": "^0.0.66",
+    "@auth/drizzle-adapter": "^1.4.2",
+    "@neondatabase/serverless": "^0.10.1",
     "ai": "^3.4.9",
+    "drizzle-orm": "^0.33.0",
     "hono": "^4.6.3",
+    "postgres": "^3.4.4",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240925.0",
+    "drizzle-kit": "^0.24.2",
     "wrangler": "^3.79.0"
   }
 }
