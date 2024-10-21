@@ -28,7 +28,7 @@ export const authMiddleware = async (c, next) => {
     }
   
     const hashFromClient = authHeader.split(' ')[1];
-    const secret = c.env.NEXTAUTH_SECRET; 
+    const secret = c.env.SECRET; 
 
     let dataToHash;
     if (c.req.method === 'GET') {
@@ -40,7 +40,10 @@ export const authMiddleware = async (c, next) => {
         dataToHash = JSON.stringify(body || {});
     }
 
+    console.log(dataToHash)
+
     const hashFromServer = createHmac('sha256', secret).update(dataToHash).digest('hex');
+    console.log(hashFromServer);
   
     if (hashFromClient !== hashFromServer) {
       return c.json({ error: 'Forbidden' }, 403);

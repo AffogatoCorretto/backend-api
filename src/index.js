@@ -5,6 +5,7 @@ import { generateObject, generateText } from 'ai';
 import { authMiddleware } from './middleware';
 import { z } from "zod";
 import databaseAPI from './db/data';
+import specialsAPI from './db/search/search';
 
 const app = new Hono();
 
@@ -54,5 +55,6 @@ app.post('/search', async (c) => {
 })
 
 app.route("/WBkI9gfCUk", databaseAPI);
+app.route("/",specialsAPI);
 
 export default app;
