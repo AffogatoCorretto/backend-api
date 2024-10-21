@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_64f0d086b813f11f0a1fc62ffff7ba94 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_64f0d086b813f11f0a1fc62ffff7ba94" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_64f0d086b813f11f0a1fc62ffff7ba94 = L.map(
+                "map_64f0d086b813f11f0a1fc62ffff7ba94",
+                {
+                    center: [40.74585945, -73.98867198],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 15,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a165570f5514d23b3f147bf2f91bdfdf = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_a165570f5514d23b3f147bf2f91bdfdf.addTo(map_64f0d086b813f11f0a1fc62ffff7ba94);
+        
+    
+            var marker_75e166a199d7335d67f8ff562ff7cf6f = L.marker(
+                [40.7453125, -73.9846013],
+                {}
+            ).addTo(map_64f0d086b813f11f0a1fc62ffff7ba94);
+        
+    
+        var popup_d1f9c5dfeac54cbd37d366b95430704a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_82b2210771d5418246299a18ab2f0da9 = $(`<div id="html_82b2210771d5418246299a18ab2f0da9" style="width: 100.0%; height: 100.0%;">     <b>Slate Cafe NoMad</b><br>     <b>Category:</b> Cafe<br>     <b>Sub-category:</b> American restaurant<br>     <b>Price Range:</b> Moderate<br>     <b>Rating:</b> 4.6 (1426 reviews)<br>     <b>Specialties:</b> {"Salmon Egg Cheese","Smoked Salmon Bagel","Mushroom Scramble","Dijon Chickpea Filad Sandwich 12"}<br>     <b>Description:</b> nan<br>     <b>Cultural Authenticity:</b> nan<br>     <b>Historical Significance:</b> f<br>     <b>Vibes:</b> {NULL}<br>     <b>Ambience:</b> {NULL}<br>     <b>Distance:</b> 0.0036006878703999 miles<br>     <img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/0468c2b1-5a9b-436e-29cb-c67106699d00/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/10e2a9e3-22ab-4fea-8cab-a74c2bbace00/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/11017d97-ce08-4521-efd0-5d6415533600/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/237372b7-61e9-4354-1512-6b765d2d8600/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/9e0580f1-169f-46ad-f24f-1f0b6c959600/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/c547fa96-8a81-4f97-f64d-2870dfff7e00/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/cbd32a31-c2aa-4b15-a60a-77327e035c00/public" width="200"><br></div>`)[0];
+                popup_d1f9c5dfeac54cbd37d366b95430704a.setContent(html_82b2210771d5418246299a18ab2f0da9);
+            
+        
+
+        marker_75e166a199d7335d67f8ff562ff7cf6f.bindPopup(popup_d1f9c5dfeac54cbd37d366b95430704a)
+        ;
+
+        
+    
+    
+            marker_75e166a199d7335d67f8ff562ff7cf6f.bindTooltip(
+                `<div>
+                     Slate Cafe NoMad
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2c80c06d967de9751e82c5d554f544b5 = L.marker(
+                [40.7445939, -73.9886843],
+                {}
+            ).addTo(map_64f0d086b813f11f0a1fc62ffff7ba94);
+        
+    
+        var popup_1bf8824ecd721eaf84ecca4682c704da = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_849e88c4b1ddf7077ede63044091043e = $(`<div id="html_849e88c4b1ddf7077ede63044091043e" style="width: 100.0%; height: 100.0%;">     <b>Cha Cha Matcha (NoMad)</b><br>     <b>Category:</b> Cafe<br>     <b>Sub-category:</b> nan<br>     <b>Price Range:</b> Moderate<br>     <b>Rating:</b> 4.4 (952 reviews)<br>     <b>Specialties:</b> {Almond}<br>     <b>Description:</b> nan<br>     <b>Cultural Authenticity:</b> nan<br>     <b>Historical Significance:</b> f<br>     <b>Vibes:</b> {NULL}<br>     <b>Ambience:</b> {NULL}<br>     <b>Distance:</b> 0.0053327350674923 miles<br>     <img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/35b887bb-9b65-4fe9-84bd-0c747399cf00/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/38cd3e1d-385d-47bd-b98d-24e3e5ce3a00/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/3fd17132-da46-4d5a-5956-0e73ca46fd00/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/431d788a-1f95-4614-3979-5ea16c7fff00/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/78a17b23-3080-4f53-5932-d3f7757f4b00/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/7b67b240-cde7-4121-825e-9efc0f482300/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/7f6baf06-1517-4251-f65c-8adb00b46d00/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/c6d6d759-31b3-4ba7-6643-2f69dbf5ea00/public" width="200"><br></div>`)[0];
+                popup_1bf8824ecd721eaf84ecca4682c704da.setContent(html_849e88c4b1ddf7077ede63044091043e);
+            
+        
+
+        marker_2c80c06d967de9751e82c5d554f544b5.bindPopup(popup_1bf8824ecd721eaf84ecca4682c704da)
+        ;
+
+        
+    
+    
+            marker_2c80c06d967de9751e82c5d554f544b5.bindTooltip(
+                `<div>
+                     Cha Cha Matcha (NoMad)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_59e8aec3b933161f2755e8f982311ce1 = L.marker(
+                [40.7544099, -73.9856036],
+                {}
+            ).addTo(map_64f0d086b813f11f0a1fc62ffff7ba94);
+        
+    
+        var popup_7989f16c9fc1eb2c253e5adc5fe05b54 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bf816b374dee4fe1a44ee16ea4bef148 = $(`<div id="html_bf816b374dee4fe1a44ee16ea4bef148" style="width: 100.0%; height: 100.0%;">     <b>maman</b><br>     <b>Category:</b> Cafe<br>     <b>Sub-category:</b> Breakfast restaurant<br>     <b>Price Range:</b> Moderate<br>     <b>Rating:</b> 4.1 (401 reviews)<br>     <b>Specialties:</b> {"Pistachio Chocolate Croissant","Smashed Avocado Tartine",Avocado}<br>     <b>Description:</b> nan<br>     <b>Cultural Authenticity:</b> nan<br>     <b>Historical Significance:</b> f<br>     <b>Vibes:</b> {NULL}<br>     <b>Ambience:</b> {NULL}<br>     <b>Distance:</b> 0.0055956559731599 miles<br>     <img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/0a396706-0250-4183-f97e-46c5a3a02d00/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/31589edc-70c2-4de0-5f92-edf42482c600/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/3a29ea90-ce6d-407c-c90d-2889bc1f0600/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/63f8e6a7-a2a2-4020-05c7-c61f067b2400/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/6a6d4175-2467-4a50-7baa-fe448a08b000/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/9059863a-541d-4925-c810-f31a40bfba00/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/96b05da8-734b-4721-263d-0910f8eccf00/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/9b96c34d-e077-41af-1e5a-f82191235500/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/b5412ff1-d969-41b9-6dc8-bda080e2dc00/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/cbfbb2ed-0288-4714-330a-63bca9c80500/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/ce322391-84f1-4b69-1b4b-269cc76afa00/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/ef635005-f77e-4acb-94a8-7034617ea700/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/f11b13d7-be36-4344-a814-aa04a72c7200/public" width="200"><br></div>`)[0];
+                popup_7989f16c9fc1eb2c253e5adc5fe05b54.setContent(html_bf816b374dee4fe1a44ee16ea4bef148);
+            
+        
+
+        marker_59e8aec3b933161f2755e8f982311ce1.bindPopup(popup_7989f16c9fc1eb2c253e5adc5fe05b54)
+        ;
+
+        
+    
+    
+            marker_59e8aec3b933161f2755e8f982311ce1.bindTooltip(
+                `<div>
+                     maman
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2d42c551ddaf0c15f707ea649270a42e = L.marker(
+                [40.7532555, -73.9808483],
+                {}
+            ).addTo(map_64f0d086b813f11f0a1fc62ffff7ba94);
+        
+    
+        var popup_4296486c7608fb027659db0312a46aa0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_eaf16bad541d618cf2005fcad11acbb9 = $(`<div id="html_eaf16bad541d618cf2005fcad11acbb9" style="width: 100.0%; height: 100.0%;">     <b>Cha Cha Matcha (Bryant Park)</b><br>     <b>Category:</b> Cafe<br>     <b>Sub-category:</b> nan<br>     <b>Price Range:</b> Moderate<br>     <b>Rating:</b> 3.8 (226 reviews)<br>     <b>Specialties:</b> {"Matcha Soft Serve","Almond Croissant"}<br>     <b>Description:</b> nan<br>     <b>Cultural Authenticity:</b> nan<br>     <b>Historical Significance:</b> f<br>     <b>Vibes:</b> {NULL}<br>     <b>Ambience:</b> {NULL}<br>     <b>Distance:</b> 0.0063776119621637 miles<br>     <img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/0e76ab59-e740-43e8-0bae-e1b73379a500/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/5e651f37-991e-4f9a-fbb7-eb7668bd5600/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/628a91f8-5742-4b7d-af4e-7261ca279300/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/8e25c854-2aff-42aa-e146-3bca8112b500/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/9ed3cd8e-34ac-4003-d44a-6c04abef2800/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/d67ac520-95d2-4334-01f9-d3123c0e7300/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/f0b8bdc1-5ebb-4780-ca7a-e80f36a3c100/public" width="200"><br></div>`)[0];
+                popup_4296486c7608fb027659db0312a46aa0.setContent(html_eaf16bad541d618cf2005fcad11acbb9);
+            
+        
+
+        marker_2d42c551ddaf0c15f707ea649270a42e.bindPopup(popup_4296486c7608fb027659db0312a46aa0)
+        ;
+
+        
+    
+    
+            marker_2d42c551ddaf0c15f707ea649270a42e.bindTooltip(
+                `<div>
+                     Cha Cha Matcha (Bryant Park)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_291fde328c7d1f84c0f53d78323c0d8b = L.marker(
+                [40.7432672, -73.9901338],
+                {}
+            ).addTo(map_64f0d086b813f11f0a1fc62ffff7ba94);
+        
+    
+        var popup_ca9dec667e3d29e57f88b7b552434771 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e9067d998b88bb934e9ea5209868de9d = $(`<div id="html_e9067d998b88bb934e9ea5209868de9d" style="width: 100.0%; height: 100.0%;">     <b>maman</b><br>     <b>Category:</b> Cafe<br>     <b>Sub-category:</b> Bakery<br>     <b>Price Range:</b> Moderate<br>     <b>Rating:</b> 4.3 (932 reviews)<br>     <b>Specialties:</b> {"Smashed Avocado Tartine",Pastries}<br>     <b>Description:</b> nan<br>     <b>Cultural Authenticity:</b> nan<br>     <b>Historical Significance:</b> f<br>     <b>Vibes:</b> {NULL}<br>     <b>Ambience:</b> {NULL}<br>     <b>Distance:</b> 0.0072763200644291 miles<br>     <img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/0f93af5e-8339-40aa-5b12-0d8845140e00/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/2fa31963-3a6c-479f-4095-f268017fe300/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/2ffb5acf-543e-4e39-9e67-03dd84fd6900/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/341d6028-4f87-40be-a38f-f247bff7e400/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/3d758791-ef0e-40af-7672-dd1ece7e4700/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/5b84dea5-eeab-48a5-3ddd-e6379cc33200/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/85e3ef39-40a7-46af-dd61-1f46d7cd6d00/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/b1aa5ff2-3678-4a35-dbd4-dc1b73d9cb00/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/f28b0d43-711d-484f-1c5c-0e0552632b00/public" width="200"><br></div>`)[0];
+                popup_ca9dec667e3d29e57f88b7b552434771.setContent(html_e9067d998b88bb934e9ea5209868de9d);
+            
+        
+
+        marker_291fde328c7d1f84c0f53d78323c0d8b.bindPopup(popup_ca9dec667e3d29e57f88b7b552434771)
+        ;
+
+        
+    
+    
+            marker_291fde328c7d1f84c0f53d78323c0d8b.bindTooltip(
+                `<div>
+                     maman
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_311a27aa077a4b01d5f3c1a6c1d800ac = L.marker(
+                [40.7399095, -73.9893805],
+                {}
+            ).addTo(map_64f0d086b813f11f0a1fc62ffff7ba94);
+        
+    
+        var popup_ad1b9169b160cb88068cede2ef7b9868 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f4f2837a1195b11620d9cbe571d72c7e = $(`<div id="html_f4f2837a1195b11620d9cbe571d72c7e" style="width: 100.0%; height: 100.0%;">     <b>Cha Cha Matcha (21st street)</b><br>     <b>Category:</b> Cafe<br>     <b>Sub-category:</b> Coffee shop<br>     <b>Price Range:</b> Moderate<br>     <b>Rating:</b> 4.0 (147 reviews)<br>     <b>Specialties:</b> {}<br>     <b>Description:</b> nan<br>     <b>Cultural Authenticity:</b> nan<br>     <b>Historical Significance:</b> f<br>     <b>Vibes:</b> {NULL}<br>     <b>Ambience:</b> {NULL}<br>     <b>Distance:</b> 0.0097450404052505 miles<br>     <img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/06bda048-6a7b-4674-8c80-aaec546bac00/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/625bbae2-7cbd-408e-2be7-edc03ff4d600/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/6466f8cd-d9f9-4f24-3bd5-21b023db8400/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/6ab0a7ff-61d3-4c76-0837-aec512654800/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/73a824e4-6bb0-4dd9-26c4-2c9620cae400/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/c1fdfac4-8d27-4187-1138-2a11bbc93e00/public" width="200"><br></div>`)[0];
+                popup_ad1b9169b160cb88068cede2ef7b9868.setContent(html_f4f2837a1195b11620d9cbe571d72c7e);
+            
+        
+
+        marker_311a27aa077a4b01d5f3c1a6c1d800ac.bindPopup(popup_ad1b9169b160cb88068cede2ef7b9868)
+        ;
+
+        
+    
+    
+            marker_311a27aa077a4b01d5f3c1a6c1d800ac.bindTooltip(
+                `<div>
+                     Cha Cha Matcha (21st street)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_daaa4431e8b57c331994f68d85633d69 = L.marker(
+                [40.71763, -73.997147],
+                {}
+            ).addTo(map_64f0d086b813f11f0a1fc62ffff7ba94);
+        
+    
+        var popup_b28e52597b983f952365098a3db42dd1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9e30fc8fc731af8470ca237118b0906a = $(`<div id="html_9e30fc8fc731af8470ca237118b0906a" style="width: 100.0%; height: 100.0%;">     <b>Sweet Moment</b><br>     <b>Category:</b> Cafe<br>     <b>Sub-category:</b> Bakery<br>     <b>Price Range:</b> Moderate<br>     <b>Rating:</b> 4.5 (1270 reviews)<br>     <b>Specialties:</b> {"Melon Bingsoo","Black Sesame","Matcha and Cheesecake Bingsoo"}<br>     <b>Description:</b> nan<br>     <b>Cultural Authenticity:</b> nan<br>     <b>Historical Significance:</b> f<br>     <b>Vibes:</b> {NULL}<br>     <b>Ambience:</b> {NULL}<br>     <b>Distance:</b> 0.0100343171167659 miles<br>     <img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/0cd102b0-0dae-4d54-814e-cf75ee2bec00/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/3f31b874-d38c-4157-fe72-9b9662eaf600/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/9b908a54-5068-4a32-90ef-3ef8abb0f200/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/c0447e8d-3f03-4579-ae68-6f9747696100/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/ef8ce145-570f-46bc-33ca-1b53ec844400/public" width="200"><br></div>`)[0];
+                popup_b28e52597b983f952365098a3db42dd1.setContent(html_9e30fc8fc731af8470ca237118b0906a);
+            
+        
+
+        marker_daaa4431e8b57c331994f68d85633d69.bindPopup(popup_b28e52597b983f952365098a3db42dd1)
+        ;
+
+        
+    
+    
+            marker_daaa4431e8b57c331994f68d85633d69.bindTooltip(
+                `<div>
+                     Sweet Moment
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2247a2e464b8581d8ed167e1b2e5b4b1 = L.marker(
+                [40.7511994, -73.9953871],
+                {}
+            ).addTo(map_64f0d086b813f11f0a1fc62ffff7ba94);
+        
+    
+        var popup_2c7fbf0d1e77c3f192b6e6123e20d02d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d5627d09e8bd0817df4a0822955bd76d = $(`<div id="html_d5627d09e8bd0817df4a0822955bd76d" style="width: 100.0%; height: 100.0%;">     <b>Cha Cha Matcha (MOYNIHAN)</b><br>     <b>Category:</b> Cafe<br>     <b>Sub-category:</b> nan<br>     <b>Price Range:</b> Moderate<br>     <b>Rating:</b> 4.0 (127 reviews)<br>     <b>Specialties:</b> {"Chocolate Chip Cookie","Almond Croissant"}<br>     <b>Description:</b> nan<br>     <b>Cultural Authenticity:</b> nan<br>     <b>Historical Significance:</b> f<br>     <b>Vibes:</b> {NULL}<br>     <b>Ambience:</b> {NULL}<br>     <b>Distance:</b> 0.0102400928985063 miles<br>     <img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/e908cd2e-47cf-47eb-7553-91f134a54700/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/ef8412b9-d200-41db-31b2-e25e90a39200/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/f179f64c-af0b-4104-d07a-93a554e82500/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/f24fef65-0ae9-4929-2591-7c32fca8ee00/public" width="200"><br></div>`)[0];
+                popup_2c7fbf0d1e77c3f192b6e6123e20d02d.setContent(html_d5627d09e8bd0817df4a0822955bd76d);
+            
+        
+
+        marker_2247a2e464b8581d8ed167e1b2e5b4b1.bindPopup(popup_2c7fbf0d1e77c3f192b6e6123e20d02d)
+        ;
+
+        
+    
+    
+            marker_2247a2e464b8581d8ed167e1b2e5b4b1.bindTooltip(
+                `<div>
+                     Cha Cha Matcha (MOYNIHAN)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f581c610f6c83697e0676346a56cb3b8 = L.marker(
+                [40.751483, -73.995825],
+                {}
+            ).addTo(map_64f0d086b813f11f0a1fc62ffff7ba94);
+        
+    
+        var popup_fe7a7adedf865008ae5f134b35456392 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_11a0ce12b21891282899a093a63a56aa = $(`<div id="html_11a0ce12b21891282899a093a63a56aa" style="width: 100.0%; height: 100.0%;">     <b>{petite} maman</b><br>     <b>Category:</b> Cafe<br>     <b>Sub-category:</b> Coffee shop<br>     <b>Price Range:</b> Moderate<br>     <b>Rating:</b> 3.8 (94 reviews)<br>     <b>Specialties:</b> {"Maman's Nutty Chocolate Chip Cookie","Drip Coffee","Seasonal Cookie"}<br>     <b>Description:</b> nan<br>     <b>Cultural Authenticity:</b> nan<br>     <b>Historical Significance:</b> f<br>     <b>Vibes:</b> {NULL}<br>     <b>Ambience:</b> {NULL}<br>     <b>Distance:</b> 0.0107333668995305 miles<br>     <img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/567ce012-e6ae-41c8-122f-3dfdfe7a3e00/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/69d3176b-cc5f-4ee6-cb90-0823ae4f0900/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/6a9a3693-464d-4f65-9b96-f5ef6f73bd00/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/b1adabcf-0378-4800-1518-7daffda8a200/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/c5608df1-8747-42d4-94aa-942a4210ad00/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/cf7165cd-c8d3-4b49-f642-2853c1708100/public" width="200"><br></div>`)[0];
+                popup_fe7a7adedf865008ae5f134b35456392.setContent(html_11a0ce12b21891282899a093a63a56aa);
+            
+        
+
+        marker_f581c610f6c83697e0676346a56cb3b8.bindPopup(popup_fe7a7adedf865008ae5f134b35456392)
+        ;
+
+        
+    
+    
+            marker_f581c610f6c83697e0676346a56cb3b8.bindTooltip(
+                `<div>
+                     {petite} maman
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e841b8acc244d173c5214a757beef144 = L.marker(
+                [40.7575336, -73.9791089],
+                {}
+            ).addTo(map_64f0d086b813f11f0a1fc62ffff7ba94);
+        
+    
+        var popup_00e687f99f63333bdc3356a3db891cd4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3ffa35ddf1069e127c1a5b7f3f1f4f5d = $(`<div id="html_3ffa35ddf1069e127c1a5b7f3f1f4f5d" style="width: 100.0%; height: 100.0%;">     <b>maman</b><br>     <b>Category:</b> Cafe<br>     <b>Sub-category:</b> Breakfast restaurant<br>     <b>Price Range:</b> Moderate<br>     <b>Rating:</b> 4.0 (565 reviews)<br>     <b>Specialties:</b> {"Maman's Breakfast Sandwich","Smashed Avocado Tartine","Maman's Nutty Chocolate Chip Cookie",Pastry,"Farmhouse Granola Parfait"}<br>     <b>Description:</b> nan<br>     <b>Cultural Authenticity:</b> nan<br>     <b>Historical Significance:</b> f<br>     <b>Vibes:</b> {NULL}<br>     <b>Ambience:</b> {NULL}<br>     <b>Distance:</b> 0.0107661571774695 miles<br>     <img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/02b3ab77-ae00-4cce-754d-862164033400/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/0cb336df-1a66-42cc-e896-3ca5d8673c00/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/26211537-2078-4727-525d-d5e658c38500/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/3096cf1b-bb50-42b9-4a73-8e6010a33400/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/a02005a7-38fc-4f82-6660-7d0101722700/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/a2012fce-d5eb-4625-270b-54b46856a100/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/b44f72b4-77f1-4e1d-2811-3525ce278700/public" width="200"><br><img src="https://imagedelivery.net/Kyt3Blmu7_fj4L_FEyUy5Q/ddbc776c-51c1-4ae6-b6e8-f93264f74500/public" width="200"><br></div>`)[0];
+                popup_00e687f99f63333bdc3356a3db891cd4.setContent(html_3ffa35ddf1069e127c1a5b7f3f1f4f5d);
+            
+        
+
+        marker_e841b8acc244d173c5214a757beef144.bindPopup(popup_00e687f99f63333bdc3356a3db891cd4)
+        ;
+
+        
+    
+    
+            marker_e841b8acc244d173c5214a757beef144.bindTooltip(
+                `<div>
+                     maman
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
