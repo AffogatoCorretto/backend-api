@@ -6,6 +6,9 @@ import { authMiddleware } from './middleware';
 import { z } from "zod";
 import databaseAPI from './db/data';
 import specialsAPI from './db/search/search';
+import { schema } from './db/search/aiSchema';
+import neighborhoodZipcodes from './constants/zipcodes';
+import { getRankedItems } from './db/search';
 
 const app = new Hono();
 
@@ -41,17 +44,37 @@ app.post('/search', async (c) => {
     model: model,
     schemaName: 'restaurant_search_analysis',
     schemaDescription: 'Analyze user queries related to finding restaurants and return a structured response.',
-    schema: z.object({
-      includesPeopleCount: z.boolean(),       
-      includesNeighborhood: z.boolean(),       
-      missingInfo: z.string(),     
-      peopleCount: z.number(),     
-      neighborhoods: z.array(z.string()),  
-    }),
-    prompt: `Analyze the following user restaurant search query: "${query}". Provide a structured response with whether the query includes a number of people and a neighborhood. If either is missing, return the missing information.`,
+    schema: schema,
+    prompt: `Analyze the user's query: ${query} to generate specific categories, keywords, curated categories, title, and neighborhoods based on the intent of finding a cafe, bakery, or similar venue, only give most relevant max 3`,
   });
+
+  const data = result.object;
+
+  console.log(data)
+
+  const combinedZipcodes = data.neighbourhoods.reduce((accumulator, neighborhood) => {
+    const zipcodes = neighborhoodZipcodes[neighborhood]?.zipcodes || [];
+    zipcodes.forEach(zip => {
+      if (!accumulator.includes(zip)) {
+        accumulator.push(zip);
+      }
+    });
+    return accumulator;
+  }, []);
+
+  const userInput = {
+    categoryArray: data.categoryArray || ["Cafe"],
+    keywords: data.keywords || ["Coffee Shop"],
+    zipcodes: combinedZipcodes || [10018, 10004, 10005],
+    isOpenFilter: body.isOpenFilter ?? false,
+    ambienceArray: body.ambienceArray || [],
+    vibesArray: body.vibesArray || [],
+    priceRangeArray: body.priceRangeArray || [],
+  };
+
+  const rankedSpecials = await getRankedItems(c.env.DATABASE_URL, userInput);
   
-  return c.json({result: result.object, status_code: 200});
+  return  c.json({result: rankedSpecials, status_code: 200});
 })
 
 app.route("/WBkI9gfCUk", databaseAPI);

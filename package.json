@@ -4,7 +4,8 @@
     "dev": "wrangler dev",
     "deploy": "wrangler deploy --minify",
     "schema-update": "drizzle-kit generate --config=drizzle.config.js",
-    "migrate:neon": "node --env-file=.dev.vars src/migrate.js"
+    "migrate:neon": "node --env-file=.dev.vars src/migrate.js",
+    "sql:drop": "node --env-file=.dev.vars src/db/data/dropTable.js"
   },
   "dependencies": {
     "@ai-sdk/google": "^0.0.51",
