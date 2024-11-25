@@ -9,7 +9,7 @@ specialsAPI.post('/specials', async (c) => {
 
     const userInput = {
         categoryArray: body.categoryArray || ["sightseeing_&_landmark"],
-        keywords: body.keywords || ["nyc"],
+        keywords: body.keywords || [],
         zipcodes: body.zipcodes || [10018, 10004, 10005],
         isOpenFilter: body.isOpenFilter ?? false,
         ambienceArray: body.ambienceArray || [],

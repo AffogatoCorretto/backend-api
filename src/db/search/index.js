@@ -136,8 +136,7 @@ export async function getRankedItems(DATABASE_URL, userInput) {
     LEFT JOIN image_aggregation AS ia2 ON i.item_id = ia2.item_id
     WHERE 
         i.active_status = TRUE
-        AND i.category IN ('Cafe')
-        AND i.price_range IN ('Moderate')
+        AND ${filters}
     GROUP BY 
         i.item_id, i.item_name, i.latitude, i.longitude, 
         i.category, i.sub_category, i.price_range, i.specialties, 
