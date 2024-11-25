@@ -62,7 +62,7 @@ databaseAPI.post('/items', async (c) => {
         openingHours: body.openingHours || {},
         activeStatus: body.activeStatus ?? true,
         imageUrls: body.imageUrls || [],
-        // We'll handle keywords separately
+        keywords: body.keywords || [],
       })
       .returning({ itemId: items.itemId });
 

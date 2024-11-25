@@ -8,8 +8,8 @@ specialsAPI.post('/specials', async (c) => {
     const body = await c.req.json();
 
     const userInput = {
-        categoryArray: body.categoryArray || ["Cafe"],
-        keywords: body.keywords || ["Coffee Shop"],
+        categoryArray: body.categoryArray || ["sightseeing_&_landmark"],
+        keywords: body.keywords || ["nyc"],
         zipcodes: body.zipcodes || [10018, 10004, 10005],
         isOpenFilter: body.isOpenFilter ?? false,
         ambienceArray: body.ambienceArray || [],
