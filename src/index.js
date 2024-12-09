@@ -42,10 +42,10 @@ app.post('/search', async (c) => {
 
   const result = await generateObject({
     model: model,
-    schemaName: 'restaurant_search_analysis',
-    schemaDescription: 'Analyze user queries related to finding restaurants and return a structured response.',
+    schemaName: 'experience_discovery_analysis',
+    schemaDescription: 'Analyze user queries related to discovering unique NYC experiences (such as hidden restaurants, famous hiking trails, local events, and non-touristy hidden gems) and return a structured response.',
     schema: schema,
-    prompt: `Analyze the user's query: ${query} to generate specific categories, keywords, curated categories, title, and neighborhoods based on the intent of finding a cafe, bakery, or similar venue, only give most relevant max 3`,
+    prompt: `Analyze the user's query: ${query} to generate specific categories, keywords, curated categories, title, and neighborhoods. The focus is on discovering unique and possibly hidden experiences in NYC—this may include lesser-known restaurants, famous hiking trails, local events, and non-touristy hidden gems. If sufficient details cannot be extracted, return empty arrays or strings as appropriate. Provide only the most relevant items (up to three) for each category.`
   });
 
   const data = result.object;
@@ -63,7 +63,7 @@ app.post('/search', async (c) => {
   }, []);
 
   const userInput = {
-    categoryArray: data.categoryArray || ["Cafe"],
+    categoryArray: data.categoryArray || ['dinning_&_culinary','arts_&_culture'],
     keywords: data.keywords || ["Coffee Shop"],
     zipcodes: combinedZipcodes || [10018, 10004, 10005],
     isOpenFilter: body.isOpenFilter ?? false,

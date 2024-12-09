@@ -7,21 +7,28 @@ export const schema = jsonSchema({
         type: "array",
         items: {
           type: "string",
+          enum: [
+            'sightseeing_&_landmark',
+            'arts_&_culture',
+            'entertainment_&_nightlife',
+            'dinning_&_culinary',
+            'shopping',
+            'outdoor_&_natural'
+          ]
         },
-        description: "Array of matching possible cafe categories [I am only focusing on cafe for now, so only and strictly return cafes, bakery, pastries (basicially stuff you get in a cafes like sandwich, croissant etc) etc related categories for now] mostly keywords from the query. Even the QUERY is related to restaurants ignore restaurant related categories",
+        description: "Array of up to three main categories that best represent the place."
       },
       curatedCategoryArray: {
         type: "array",
         items: {
           type: "string",
-          enum: ['afternoon_tea', 'big_groups', 'birthdays', 'breakfast', 'brunch', 'byob', 'casual_dinners', 'cheap_eats', 'classic_establishment', 'coffee_and_a_light_bite', 'corporate_cards', 'dancing', 'date_nights', 'day_drinking', 'dining_solo', 'dinner_with_the_parents', 'dogs', 'drinking_great_beer', 'drinking_great_cocktails', 'drinking_great_mocktails', 'drinking_great_wine', 'drinks_and_a_light_bite', 'eating_at_the_bar', 'feeling_hot', 'fine_dining', 'first_dates', 'getting_work_done', 'gluten_free_options', 'halal', 'happy_hours', 'impressing_out_of_towners', 'keeping_it_kind_of_healthy', 'kids', 'kosher', 'late_nights', 'live_music', 'lunch', 'night_on_the_town', 'pastries', 'people_watching', 'pre_theater', 'private_dining', 'see_and_be_seen', 'serious_takeout_operation', 'sitting_outside', 'special_occasions', 'unique_dining_experiences', 'vegans', 'vegetarians', 'walk_ins', 'wasting_your_time_and_money', 'watching_sports', 'artisanal_coffee', 'hybrid_workspace_cafe', 'deconstructed_desserts', 'artisanal_pastries', 'artisanal_ice_creams', 'decadent_cakes', 'conveyor_belt_food', 'hyperlocal_cuisines', 'al_fresco_dining'],
         },
-        description: "Create an array of matching curated categories based on the context of the user's query. Analyze the intent, such as identifying the type of café the user is looking for (e.g., casual lunch spots, dessert cafés)",
+        description: "General categories describing the place (e.g., architecture, history, family-friendly, nightlife).",
       },
       keywords: {
         type: "array",
         items: { type: "string" },
-        description: "Analyze the following query and generate a diverse list of related keywords that capture food items, tags, requirements, ambience, and preferences without duplicating information from existing categories. Focus on the intent and specific food items mentioned as well as other related terms and variations.",
+        description: "Analyze the user's query and generate a diverse list of related keywords capturing activities, tags, themes, and preferences. Focus on unique NYC experiences, local culture, hidden gems, and non-touristy attractions. If no keywords can be extracted, return an empty array.",
       },
       listTitle: {
         type: "string",
