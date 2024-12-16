@@ -57,6 +57,8 @@ CREATE TABLE IF NOT EXISTS "items" (
 	"latitude" double precision,
 	"longitude" double precision,
 	"price_range" "price_range_enum",
+	"item_address" text,
+	"item_zipcode" varchar(10),
 	"historical_significance" boolean,
 	"cultural_authenticity" "cultural_authenticity_enum",
 	"specialties" varchar[],

@@ -1,5 +1,5 @@
 {
-  "id": "8b7c2c51-853b-468a-819c-8bd73f07e3a0",
+  "id": "3aa2d9a0-fda8-4031-9b37-2011e9b530ed",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -255,6 +255,18 @@
           "name": "price_range",
           "type": "price_range_enum",
           "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "item_address": {
+          "name": "item_address",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "item_zipcode": {
+          "name": "item_zipcode",
+          "type": "varchar(10)",
           "primaryKey": false,
           "notNull": false
         },

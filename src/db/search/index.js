@@ -113,6 +113,9 @@ export async function getRankedItems(DATABASE_URL, userInput) {
         i.category, 
         i.sub_category, 
         i.price_range, 
+        i.item_address,
+        i.item_zipcode,
+        i.keywords,
         i.specialties, 
         i.description, 
         i.cultural_authenticity, 
@@ -147,11 +150,13 @@ export async function getRankedItems(DATABASE_URL, userInput) {
         d.distance ASC, 
         km.keyword_match_count DESC, 
         r.average_rating DESC
-    LIMIT 10;
+    LIMIT 50;
 
     `;
 
     const results = await sql(query);
+
+    
 
     return results;
   } catch (error) {

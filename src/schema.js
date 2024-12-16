@@ -32,6 +32,8 @@ import {
     latitude: doublePrecision('latitude'),
     longitude: doublePrecision('longitude'),
     priceRange: priceRangeEnum('price_range'),
+    itemAddress: text('item_address'), 
+    itemZipcode: varchar('item_zipcode', { length: 10 }),
     historicalSignificance: boolean('historical_significance'),
     culturalAuthenticity: culturalAuthenticityEnum('cultural_authenticity'),
     specialties: varchar('specialties').array(),

@@ -56,6 +56,8 @@ databaseAPI.post('/items', async (c) => {
         latitude: body.latitude,
         longitude: body.longitude,
         priceRange: body.priceRange,
+        itemAddress: body.itemAddress,
+        itemZipcode: body.itemZipcode,
         historicalSignificance: body.historicalSignificance || false,
         culturalAuthenticity: body.culturalAuthenticity,
         specialties: body.specialties || [],
