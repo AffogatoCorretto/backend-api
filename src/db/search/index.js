@@ -1,8 +1,9 @@
 import { drizzle } from 'drizzle-orm/neon-http';
 import { neon } from '@neondatabase/serverless';
 import { zipcode_latlongdata } from '../../constants';
+import { getAIRankedList } from './aiIndexing';
 
-export async function getRankedItems(DATABASE_URL, userInput) {
+export async function getRankedItems(openai_k, DATABASE_URL, userInput, userquery) {
   try {
     const sql = neon(DATABASE_URL);
     const db = drizzle(sql);
@@ -156,9 +157,9 @@ export async function getRankedItems(DATABASE_URL, userInput) {
 
     const results = await sql(query);
 
-    
+    const rankedList = await getAIRankedList(openai_k, userquery, results);
 
-    return results;
+    return rankedList;
   } catch (error) {
     console.error('Error retrieving ranked items:', error);
     throw error;

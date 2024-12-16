@@ -50,8 +50,6 @@ app.post('/search', async (c) => {
 
   const data = result.object;
 
-  console.log(data)
-
   const combinedZipcodes = data.neighbourhoods.reduce((accumulator, neighborhood) => {
     const zipcodes = neighborhoodZipcodes[neighborhood]?.zipcodes || [];
     zipcodes.forEach(zip => {
@@ -72,7 +70,7 @@ app.post('/search', async (c) => {
     priceRangeArray: body.priceRangeArray || [],
   };
 
-  const rankedSpecials = await getRankedItems(c.env.DATABASE_URL, userInput);
+  const rankedSpecials = await getRankedItems(c.env.OPENAI_API_KEY, c.env.DATABASE_URL, userInput, query);
   
   return  c.json({result: rankedSpecials, status_code: 200});
 })

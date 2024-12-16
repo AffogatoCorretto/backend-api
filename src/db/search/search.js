@@ -17,7 +17,7 @@ specialsAPI.post('/specials', async (c) => {
         priceRangeArray: body.priceRangeArray || [],
     };
 
-    const rankedSpecials = await getRankedItems(c.env.DATABASE_URL, userInput);
+    const rankedSpecials = await getRankedItems(c.env.OPENAI_API_KEY, c.env.DATABASE_URL, userInput, JSON.stringify(userInput));
     return c.json({result: rankedSpecials, status_code: 200});
 
   } catch (error) {
