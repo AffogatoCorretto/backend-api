@@ -46,7 +46,7 @@ export const getAIRankedList = async (openai_k, query, results) => {
     const result = await generateObject({
         model,
         schemaName: 'ranked_items_list',
-        schemaDescription: 'Rank ALL list of items based on their relevance to the given query. Return a ranked array of all item names',
+        schemaDescription: 'Rank ALL list of items based on their relevance to the given user query [understand the context]. Return a ranked array of all item names',
         schema,
         prompt
       });
